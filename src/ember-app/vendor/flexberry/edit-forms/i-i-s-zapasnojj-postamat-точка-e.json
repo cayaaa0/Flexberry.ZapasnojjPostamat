@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Постамат.ЗаписьПолуч.Ячейка",
+      "projection": "ЯчейкаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Постамат.ЗаписьПолуч.Посылка",
+      "projection": "ПосылкаL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Точка",
+  "name": "IISZapasnojj_postamatТочкаE",
+  "className": "ТочкаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-postamat-точка",
+      "modelProjection": "ТочкаE"
+    }
+  ]
+}

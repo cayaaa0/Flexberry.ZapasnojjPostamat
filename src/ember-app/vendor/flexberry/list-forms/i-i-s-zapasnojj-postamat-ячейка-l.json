@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-postamat-ячейка-e",
+  "editForm": "i-i-s-zapasnojj-postamat-ячейка-e",
+  "external": false,
+  "caption": "Ячейка",
+  "name": "IISZapasnojj_postamatЯчейкаL",
+  "className": "ЯчейкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-postamat-ячейка",
+      "modelProjection": "ЯчейкаL"
+    }
+  ]
+}

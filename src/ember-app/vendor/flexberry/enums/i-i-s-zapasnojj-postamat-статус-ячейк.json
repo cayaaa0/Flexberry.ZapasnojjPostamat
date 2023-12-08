@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Zapasnojj_postamat",
+  "className": "СтатусЯчейк",
+  "enumObjects": {
+    "1": "Занята",
+    "2": "Свободна"
+  }
+}

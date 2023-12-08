@@ -1,0 +1,85 @@
+<h3 class="ui header">{{t "forms.i-i-s-zapasnojj-postamat-посылка-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номПосылки
+      class=(if (v-get validationModel "номПосылки" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-postamat-посылка-e.номПосылки-caption")
+      data-test-i-i-s-zapasnojj-postamat-посылка-e-номПосылки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номПосылки" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-zapasnojj-postamat-посылка-e-статус="true">
+    <label>{{t "forms.i-i-s-zapasnojj-postamat-посылка-e.статус-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-zapasnojj-postamat-статусы")
+      value=model.статус
+      class=(if (v-get validationModel "статус" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статус" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерПост
+      class=(if (v-get validationModel "номерПост" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-postamat-посылка-e.номерПост-caption")
+      data-test-i-i-s-zapasnojj-postamat-посылка-e-номерПост=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерПост" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерЯчейки
+      class=(if (v-get validationModel "номерЯчейки" "isInvalid") "error")
+      label=(t "forms.i-i-s-zapasnojj-postamat-посылка-e.номерЯчейки-caption")
+      data-test-i-i-s-zapasnojj-postamat-посылка-e-номерЯчейки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерЯчейки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-zapasnojj-postamat-посылка-e.получатель-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.получатель
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="получатель"
+      projection="ПолучательL"
+      title=(t "forms.i-i-s-zapasnojj-postamat-посылка-e.получатель-caption")
+      readonly=readonly
+      componentName="получательLookup"
+      class=(if (v-get validationModel "получатель" "isInvalid") "error")
+      data-test-i-i-s-zapasnojj-postamat-посылка-e-получатель=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "получатель" "message")}}
+  </div>
+</form>

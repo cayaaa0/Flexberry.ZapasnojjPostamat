@@ -1,0 +1,120 @@
+﻿{
+  "name": "IISZapasnojj_postamatЗаписьПолуч",
+  "modelName": "i-i-s-zapasnojj-postamat-запись-получ",
+  "className": "ЗаписьПолуч",
+  "nameSpace": "IIS.Zapasnojj_postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяПолуч",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПолуч",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "посылка",
+      "relatedTo": "i-i-s-zapasnojj-postamat-посылка",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "ячейка",
+      "relatedTo": "i-i-s-zapasnojj-postamat-ячейка",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "постамат",
+      "relatedTo": "i-i-s-zapasnojj-postamat-постамат",
+      "inverse": "записьПолуч"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗаписьПолучE",
+      "modelName": "i-i-s-zapasnojj-postamat-запись-получ",
+      "attrs": [
+        {
+          "name": "датаПолуч",
+          "caption": "Дата получения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяПолуч",
+          "caption": "Время получения",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерЯчейки",
+          "lookupValueField": "номерЯчейки",
+          "relationName": "Ячейка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерЯчейки",
+              "caption": "Номер ячейки",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Ячейка",
+          "name": "ячейка",
+          "relatedTo": "i-i-s-zapasnojj-postamat-ячейка",
+          "inverse": null
+        },
+        {
+          "lookupValue": "НомПосылки",
+          "lookupValueField": "номПосылки",
+          "relationName": "Посылка",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номПосылки",
+              "caption": "Номер посылки",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Посылка",
+          "name": "посылка",
+          "relatedTo": "i-i-s-zapasnojj-postamat-посылка",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

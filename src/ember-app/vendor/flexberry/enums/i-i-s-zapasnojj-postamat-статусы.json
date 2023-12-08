@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.Zapasnojj_postamat",
+  "className": "Статусы",
+  "enumObjects": {
+    "1": "Готова к выдаче",
+    "2": "Получена"
+  }
+}

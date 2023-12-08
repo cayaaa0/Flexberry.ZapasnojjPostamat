@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISZapasnojj_postamatПостамат",
+  "modelName": "i-i-s-zapasnojj-postamat-постамат",
+  "className": "Постамат",
+  "nameSpace": "IIS.Zapasnojj_postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерПост",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "точка",
+      "relatedTo": "i-i-s-zapasnojj-postamat-точка",
+      "inverse": "постамат"
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "записьПолуч",
+      "relatedTo": "i-i-s-zapasnojj-postamat-запись-получ",
+      "inverse": "постамат"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПостаматE",
+      "modelName": "i-i-s-zapasnojj-postamat-постамат",
+      "attrs": [
+        {
+          "name": "номерПост",
+          "caption": "Номер постамата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ЗаписьПолучE",
+          "caption": "Запись о получении",
+          "name": "записьПолуч",
+          "relatedTo": "i-i-s-zapasnojj-postamat-запись-получ",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

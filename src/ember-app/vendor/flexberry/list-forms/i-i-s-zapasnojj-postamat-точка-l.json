@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-postamat-точка-e",
+  "editForm": "i-i-s-zapasnojj-postamat-точка-e",
+  "external": false,
+  "caption": "Точка",
+  "name": "IISZapasnojj_postamatТочкаL",
+  "className": "ТочкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-postamat-точка",
+      "modelProjection": "ТочкаL"
+    }
+  ]
+}

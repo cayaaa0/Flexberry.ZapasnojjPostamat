@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-zapasnojj-postamat-посылка-e",
+  "editForm": "i-i-s-zapasnojj-postamat-посылка-e",
+  "external": false,
+  "caption": "Посылка",
+  "name": "IISZapasnojj_postamatПосылкаL",
+  "className": "ПосылкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-postamat-посылка",
+      "modelProjection": "ПосылкаL"
+    }
+  ]
+}

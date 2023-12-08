@@ -1,0 +1,51 @@
+﻿{
+  "applicationCaption": "Zapasnojj_postamat",
+  "applicationTitle": "Zapasnojj_postamat",
+  "items": [
+    {
+      "link": null,
+      "menuName": "постамат",
+      "caption": "Постамат",
+      "title": "Постамат",
+      "children": [
+        {
+          "link": "i-i-s-zapasnojj-postamat-точка-l",
+          "menuName": null,
+          "caption": "Расположение",
+          "title": "Точка",
+          "children": null
+        },
+        {
+          "link": "i-i-s-zapasnojj-postamat-ячейка-l",
+          "menuName": null,
+          "caption": "Ячейка",
+          "title": "Ячейка",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "получатель",
+      "caption": "Получатель",
+      "title": "Получатель",
+      "children": [
+        {
+          "link": "i-i-s-zapasnojj-postamat-получатель-l",
+          "menuName": null,
+          "caption": "Получатель",
+          "title": "Получатель",
+          "children": null
+        },
+        {
+          "link": "i-i-s-zapasnojj-postamat-посылка-l",
+          "menuName": null,
+          "caption": "Посылка",
+          "title": "Посылка",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

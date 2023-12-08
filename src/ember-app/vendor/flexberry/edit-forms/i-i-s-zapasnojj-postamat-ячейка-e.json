@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Ячейка",
+  "name": "IISZapasnojj_postamatЯчейкаE",
+  "className": "ЯчейкаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-zapasnojj-postamat-ячейка",
+      "modelProjection": "ЯчейкаE"
+    }
+  ]
+}

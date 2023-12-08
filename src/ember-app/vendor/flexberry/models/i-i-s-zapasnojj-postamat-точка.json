@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISZapasnojj_postamatТочка",
+  "modelName": "i-i-s-zapasnojj-postamat-точка",
+  "className": "Точка",
+  "nameSpace": "IIS.Zapasnojj_postamat",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "постамат",
+      "relatedTo": "i-i-s-zapasnojj-postamat-постамат",
+      "inverse": "точка"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ТочкаE",
+      "modelName": "i-i-s-zapasnojj-postamat-точка",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ПостаматE",
+          "caption": "Постамат",
+          "name": "постамат",
+          "relatedTo": "i-i-s-zapasnojj-postamat-постамат",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ТочкаL",
+      "modelName": "i-i-s-zapasnojj-postamat-точка",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
